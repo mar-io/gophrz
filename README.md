@@ -12,9 +12,13 @@ By default, the script will find the latest version of 64-bit Go and install to 
 
 ##How to Use goShell
 
-Download goShell bash script:
+Download goShell bash script:  
 
-`wget [goShell](https://raw.githubusercontent.com/badmadrad/goShell/master/goShell.sh)`
+[**goShell script**](https://raw.githubusercontent.com/badmadrad/goShell/master/goShell.sh)  
+
+or  
+
+`wget https://raw.githubusercontent.com/badmadrad/goShell/master/goShell.sh`  
 
 To see script usage and help information:
 

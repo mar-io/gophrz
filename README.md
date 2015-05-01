@@ -57,6 +57,12 @@ goShell will install the specified version if its not on your system. However, i
 
 **You may have to log out and back into the shell for changes to take effect.**
 
+## Environment Variables
+
+goShell will set `$GOROOT` to the version you specify.
+
+goShell will set `$GOPATH` to `$HOME/go`
+
 ## Basic Usage
 
      usage: $0 [ -v version -b 32/64 -d -p -h ]

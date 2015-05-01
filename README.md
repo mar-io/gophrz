@@ -14,24 +14,27 @@ By default, the script will find the latest version of 64-bit Go and install to 
 
 Download goShell bash script:
 
-`wget (goShell)[]`
+`wget [goShell](https://raw.githubusercontent.com/badmadrad/goShell/master/goShell.sh)`
 
 To see script usage and help information:
 
-`./goShell.sh -h
+`./goShell.sh -h`
 
-To install LATEST go version(64-bit default):
+To install LATEST go version (64-bit default):
 
 `./goShell.sh`
 
-To install a different version(64-bit default):
+To install a different version (64-bit default):
 `./goShell.sh -v 1.3.1`
 
-To install 32 bit(will install LATEST):
+To install 32 bit (will install LATEST):
 `./goShell.sh -b 32`
 
 To install different version and 32 bit:
 `./goShell.sh -v 1.3.1 -b 32`
+
+To purge go from your system:
+`./goShell.sh -p`
 
 ##Switching Go Versions
 

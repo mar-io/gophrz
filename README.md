@@ -1,6 +1,6 @@
 #gophrz
 
-gophrz (*pronouced "Gophers"*) is a simple bash script that will install and manage the [**Go programming language**](https://golang.org) on your linux system.
+gophrz (*pronounced "Gophers"*) is a simple bash script that will install and manage the [**Go programming language**](https://golang.org) on your linux system.
 
 The script supports bash and zsh.
 

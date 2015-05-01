@@ -70,6 +70,6 @@ goShell will install the specified version if its not on your system. However, i
 
 Any weird issues or concerns please let me know in the project issues.
 
-## LICENSE
+## License
 
 [SEE LICENSE FILE](https://github.com/badmadrad/goShell/blob/master/LICENSE)

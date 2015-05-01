@@ -44,7 +44,7 @@ if [ "$PURGE" = true ] ; then
                 elif [ "$SHELL" = "/bin/zsh" ] ; then
                   sed -i '/# GoLang/d' "$HOME/.zshrc"
                   sed -i '/export GOROOT/d' "$HOME/.zshrc"
-                  sed -i '/:$GOROOT/d' "$HOME/.bashrc"
+                  sed -i '/:$GOROOT/d' "$HOME/.zshrc"
                   sed -i '/export GOPATH/d' "$HOME/.zshrc"
                   sed -i '/:$GOPATH/d' "$HOME/.zshrc"
                   echo "Go purged!"

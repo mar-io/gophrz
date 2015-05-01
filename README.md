@@ -72,4 +72,4 @@ Any weird issues or concerns please let me know in the project issues.
 
 ## License
 
-[SEE LICENSE FILE](https://github.com/badmadrad/goShell/blob/master/LICENSE)
+[See License](https://github.com/badmadrad/goShell/blob/master/LICENSE)

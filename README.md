@@ -1,7 +1,5 @@
 #goShell
 
-##What is goShell?
-
 goShell is simple a bash script that will install go on your linux system.
 
 The script supports bash and zsh.

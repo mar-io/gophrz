@@ -18,7 +18,11 @@ Download goShell bash script:
 
 or  
 
-`wget https://raw.githubusercontent.com/badmadrad/goShell/master/goShell.sh`  
+`wget https://raw.githubusercontent.com/badmadrad/goShell/master/goShell.sh`
+
+Make script executeable:  
+
+`chmod 700 goShell.sh` 
 
 To see script usage and help information:
 
@@ -29,15 +33,19 @@ To install LATEST go version (64-bit default):
 `./goShell.sh`
 
 To install a different version (64-bit default):
+
 `./goShell.sh -v 1.3.1`
 
 To install 32 bit (will install LATEST):
+
 `./goShell.sh -b 32`
 
 To install different version and 32 bit:
+
 `./goShell.sh -v 1.3.1 -b 32`
 
 To purge go from your system:
+
 `./goShell.sh -p`
 
 ##Switching Go Versions

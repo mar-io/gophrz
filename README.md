@@ -1,6 +1,6 @@
-#goShell
+#gophrz
 
-goShell is a simple bash script that will install and manage the [**Go programming language**](https://golang.org) on your linux system.
+gophrz is a simple bash script that will install and manage the [**Go programming language**](https://golang.org) on your linux system.
 
 The script supports bash and zsh.
 
@@ -10,50 +10,50 @@ You can completely uninstall/purge go from your system.
 
 By default, the script will find the latest version of 64-bit Go and install to your system.
 
-##How to Use goShell
+##How to Use gophrz
 
-Download goShell bash script:  
+Download gophrz bash script:  
 
-[**goShell script**](https://raw.githubusercontent.com/badmadrad/goShell/master/goShell.sh)  
+[**gophrz script**](https://raw.githubusercontent.com/badmadrad/gophrz/master/gophrz.sh)  
 
 or  
 
-`wget https://raw.githubusercontent.com/badmadrad/goShell/master/goShell.sh`
+`wget https://raw.githubusercontent.com/badmadrad/gophrz/master/gophrz.sh`
 
 Make script executeable:  
 
-`chmod 700 goShell.sh` 
+`chmod 700 gophrz.sh` 
 
 To see script usage and help information:
 
-`./goShell.sh -h`
+`./gophrz.sh -h`
 
 To install LATEST go version (64-bit default):
 
-`./goShell.sh`
+`./gophrz.sh`
 
 To install a different version (64-bit default):
 
-`./goShell.sh -v 1.3.1`
+`./gophrz.sh -v 1.3.1`
 
 To install 32 bit (will install LATEST):
 
-`./goShell.sh -b 32`
+`./gophrz.sh -b 32`
 
 To install different version and 32 bit:
 
-`./goShell.sh -v 1.3.1 -b 32`
+`./gophrz.sh -v 1.3.1 -b 32`
 
 To purge go from your system:
 
-`./goShell.sh -p`
+`./gophrz.sh -p`
 
 ##Switching Go Versions
 
 To switch versions simply specify the version you want to switch to:
-`./goShell.sh -v 1.4.1`
+`./gophrz.sh -v 1.4.1`
 
-goShell will install the specified version if its not on your system. However, if you have already installed that version in the past it simply will switch to it by changing GOROOT on your system.
+gophrz will install the specified version if its not on your system. However, if you have already installed that version in the past it simply will switch to it by changing GOROOT on your system.
 
 **You may have to log out and back into the shell for changes to take effect.**
 
@@ -61,9 +61,9 @@ goShell will install the specified version if its not on your system. However, i
 
 All your Go versions are saved here: `$HOME/.go`
 
-goShell will set `$GOROOT` to the version you specify. 
+gophrz will set `$GOROOT` to the version you specify. 
 
-goShell will set your go workspace or  `$GOPATH` to `$HOME/go`
+gophrz will set your go workspace or  `$GOPATH` to `$HOME/go`
 
 ## Basic Usage
 
@@ -80,4 +80,4 @@ Any weird issues or concerns please let me know in the project issues.
 
 ## License
 
-[See License](https://github.com/badmadrad/goShell/blob/master/LICENSE)
+[See License](https://github.com/badmadrad/gophrz/blob/master/LICENSE)

@@ -18,7 +18,7 @@ To install the gophrz binary simply run the following command:
 
 `wget -qO- https://raw.githubusercontent.com/badmadrad/gophrz/master/install.sh | sh`
 
-To test gophrz was successful, simply type `gophrz` into the command line:
+To test the gophrz install was successful, simply type `gophrz` into the command line:
 
     user@yourserver:~$ gophrz
     Please either choose a go version with '-v' or pass the '-d' flag for the default latest version

@@ -1,5 +1,9 @@
 #! /usr/bin/env sh
 
+command_exists() {
+  command -v "$@" > /dev/null 2>&1
+}
+
 user="$(id -un 2>/dev/null || true)"
 
 sh_c='sh -c'

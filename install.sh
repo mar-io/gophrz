@@ -21,7 +21,36 @@ EOF
     fi
   fi
 
-$sh_c "wget -P /usr/bin https://github.com/badmadrad/gophrz/raw/master/gophrz"
+# perform some very rudimentary platform detection
+  lsb_dist=''
+  if command_exists lsb_release; then
+    lsb_dist="$(lsb_release -si)"
+  fi
+  if [ -z "$lsb_dist" ] && [ -r /etc/lsb-release ]; then
+    lsb_dist="$(. /etc/lsb-release && echo "$DISTRIB_ID")"
+  fi
+  if [ -z "$lsb_dist" ] && [ -r /etc/debian_version ]; then
+    lsb_dist='debian'
+  fi
+  if [ -z "$lsb_dist" ] && [ -r /etc/fedora-release ]; then
+    lsb_dist='fedora'
+  fi
+  if [ -z "$lsb_dist" ] && [ -r /etc/os-release ]; then
+    lsb_dist="$(. /etc/os-release && echo "$ID")"
+  fi
+
+  lsb_dist="$(echo "$lsb_dist" | tr '[:upper:]' '[:lower:]')"
+  case "$lsb_dist" in
+    amzn|fedora|centos)
+
+      $sh_c "wget -P /usr/bin https://github.com/badmadrad/gophrz/centos/raw/master/gophrz";;
+
+    ubuntu|debian|linuxmint)
+      $sh_c "wget -P /usr/bin https://github.com/badmadrad/gophrz/debian/raw/master/gophrz";;
+  esac
+
 $sh_c "chmod 755 /usr/bin/gophrz"
 echo "gophrz installed!!"
+exit 0
+
 

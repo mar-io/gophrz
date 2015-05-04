@@ -90,6 +90,15 @@ gophrz will set `$GOROOT` to the version you specify.
 
 gophrz will set your go workspace or  `$GOPATH` to `$HOME/go`
 
+## Uninstalling gophrz
+
+To remove/purge changes made by gophrz:
+
+`gophrz -p`
+
+To remove gophrz itself:
+
+`wget -qO- https://raw.githubusercontent.com/badmadrad/gophrz/master/uninstall.sh | sh`
 
 ## Issues
 

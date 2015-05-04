@@ -30,7 +30,7 @@ To see script usage and help information:
 
 To install LATEST go version (64-bit default):
 
-`./gophrz.sh`
+`./gophrz.sh -d`
 
 To install a different version (64-bit default):
 

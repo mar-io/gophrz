@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 set -e
-[ $# -eq 0 ] && set -- -d date > /dev/null
+
 GETVRS=$(curl -s https://golang.org/doc/devel/release.html | grep 'Build version' | awk '{ print $3 }' | grep -o "[0-9.][0-9.][0-9.]..")
 
 while getopts 'v:b::dph' OPT; do
@@ -10,14 +10,14 @@ while getopts 'v:b::dph' OPT; do
     d)  VERSION=$GETVRS;;
     p)  PURGE=true;;
     h)  hlp="yes";;
-    *)  unknown="yes";;
+    *)  hlp="yes";;
   esac
 done
 
 # usage
 HELP="
     usage: $0 [ -v version -b 32/64 -d -p -h ]
-        -n --> Particular Go version < ex. 0.4.2
+        -v --> Particular Go version < ex. 0.4.2
         -b --> Bit Version of Go < 32 or 64(default)
         -d --> Latest Stable Go version
         -p --> Deletes Go in its entirety from your system
@@ -27,6 +27,12 @@ HELP="
 if [ "$hlp" = "yes" ]; then
   echo "$HELP"
   exit 0
+fi
+
+if [ -z "$VERSION" ]; then
+  echo "Please either choose a go version with '-v' or pass the '-d' flag for the default latest version"
+  echo "$HELP"
+  exit 1
 fi
 
 if [ "$PURGE" = true ] ; then

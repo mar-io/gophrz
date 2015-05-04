@@ -34,6 +34,9 @@ EOF
   if [ -z "$lsb_dist" ] && [ -r /etc/debian_version ]; then
     lsb_dist='debian'
   fi
+  if [ -z "$lsb_dist" ] && [ -r /etc/redhat-release ]; then
+    lsb_dist='centos'
+  fi
   if [ -z "$lsb_dist" ] && [ -r /etc/fedora-release ]; then
     lsb_dist='fedora'
   fi
@@ -44,9 +47,7 @@ EOF
   lsb_dist="$(echo "$lsb_dist" | tr '[:upper:]' '[:lower:]')"
   case "$lsb_dist" in
     amzn|fedora|centos)
-
       $sh_c "wget -P /usr/bin https://github.com/badmadrad/gophrz/raw/master/binary/centos/gophrz";;
-
     ubuntu|debian|linuxmint)
       $sh_c "wget -P /usr/bin https://github.com/badmadrad/gophrz/raw/master/binary/debian/gophrz";;
   esac

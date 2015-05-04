@@ -30,6 +30,7 @@ To test the gophrz install was successful, type `gophrz` into the command line:
             -p --> Deletes Go in its entirety from your system
             -h --> print this help screen
 
+**The binary has been tested on RHEL/Centos 6/7 and Ubuntu 13.04/14.04. If you are having issues try the bash script below.**
 
 ### Using the bash script
 

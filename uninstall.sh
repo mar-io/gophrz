@@ -21,5 +21,5 @@ EOF
     fi
   fi
 
-$sh_c rm /usr/bin/gophrz
+$sh_c "rm /usr/bin/gophrz"
 echo "gophrz uninstalled!"

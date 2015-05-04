@@ -18,7 +18,7 @@ To install the gophrz binary simply run the following command:
 
 `wget -qO- https://raw.githubusercontent.com/badmadrad/gophrz/master/install.sh | sh`
 
-To test the gophrz install was successful, simply type `gophrz` into the command line:
+To test the gophrz install was successful, type `gophrz` into the command line:
 
     user@yourserver:~$ gophrz
     Please either choose a go version with '-v' or pass the '-d' flag for the default latest version
@@ -78,7 +78,7 @@ To purge go from your system:
 To switch versions simply specify the version you want to switch to:
 `gophrz -v 1.4.1`
 
-gophrz will install the specified version if its not on your system. However, if you have already installed that version in the past it simply will switch to it by changing GOROOT on your system.
+gophrz will install the specified version if it's not on your system. However, if a prior installed version exists, it will switch to that version by changing GOROOT to the existing location on your system.
 
 **You may have to log out and back into the shell for changes to take effect.**
 

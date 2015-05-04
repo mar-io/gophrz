@@ -21,6 +21,7 @@ EOF
     fi
   fi
 
-$sh_c wget -P /usr/bin https://github.com/badmadrad/gophrz/raw/master/gophrz
-$sh_c chmod 755 /usr/bin/gophrz
+$sh_c "wget -P /usr/bin https://github.com/badmadrad/gophrz/raw/master/gophrz"
+$sh_c "chmod 755 /usr/bin/gophrz"
 echo "gophrz installed!!"
+

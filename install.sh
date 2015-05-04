@@ -43,10 +43,10 @@ EOF
   case "$lsb_dist" in
     amzn|fedora|centos)
 
-      $sh_c "wget -P /usr/bin https://github.com/badmadrad/gophrz/centos/raw/master/gophrz";;
+      $sh_c "wget -P /usr/bin https://github.com/badmadrad/gophrz/raw/master/binary/centos/gophrz";;
 
     ubuntu|debian|linuxmint)
-      $sh_c "wget -P /usr/bin https://github.com/badmadrad/gophrz/debian/raw/master/gophrz";;
+      $sh_c "wget -P /usr/bin https://github.com/badmadrad/gophrz/raw/master/binary/debian/gophrz";;
   esac
 
 $sh_c "chmod 755 /usr/bin/gophrz"

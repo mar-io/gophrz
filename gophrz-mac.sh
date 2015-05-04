@@ -41,18 +41,18 @@ if [ "$PURGE" = true ] ; then
         [Yy]* ) rm -rf "$HOME/.go/"
                 rm -rf "$HOME/go/"
                 if [ "$SHELL" = "/bin/bash" ] ; then
-                  sed -i '/# GoLang/d' "$HOME/.bashrc"
-                  sed -i '/export GOROOT/d' "$HOME/.bashrc"
-                  sed -i '/:$GOROOT/d' "$HOME/.bashrc"
-                  sed -i '/export GOPATH/d' "$HOME/.bashrc"
-                  sed -i '/:$GOPATH/d' "$HOME/.bashrc"
+                  sed -i '' '/# GoLang/d' "$HOME/.bashrc"
+                  sed -i '' '/export GOROOT/d' "$HOME/.bashrc"
+                  sed -i '' '/:$GOROOT/d' "$HOME/.bashrc"
+                  sed -i '' '/export GOPATH/d' "$HOME/.bashrc"
+                  sed -i '' '/:$GOPATH/d' "$HOME/.bashrc"
                   echo "Go purged!"
                 elif [ "$SHELL" = "/bin/zsh" ] ; then
-                  sed -i '/# GoLang/d' "$HOME/.zshrc"
-                  sed -i '/export GOROOT/d' "$HOME/.zshrc"
-                  sed -i '/:$GOROOT/d' "$HOME/.zshrc"
-                  sed -i '/export GOPATH/d' "$HOME/.zshrc"
-                  sed -i '/:$GOPATH/d' "$HOME/.zshrc"
+                  sed -i '' '/# GoLang/d' "$HOME/.zshrc"
+                  sed -i '' '/export GOROOT/d' "$HOME/.zshrc"
+                  sed -i '' '/:$GOROOT/d' "$HOME/.zshrc"
+                  sed -i '' '/export GOPATH/d' "$HOME/.zshrc"
+                  sed -i '' '/:$GOPATH/d' "$HOME/.zshrc"
                   echo "Go purged!"
                 fi
                 exit 0;;
@@ -92,13 +92,13 @@ function goswitch {
 if [ "$SHELL" = "/bin/bash" ] ; then
   if cat $HOME/.bashrc | grep "GOROOT" > /dev/null ; then
     OLD=$(cat $HOME/.bashrc | grep "GOROOT" | grep -o "[0-9.][0-9.][0-9.]..")
-    sed -i "s@GOROOT=$HOME/.go/go-$OLD-$BIT@GOROOT=$GOGOGO@g" $HOME/.bashrc
+    sed -i '' "s@GOROOT=$HOME/.go/go-$OLD-$BIT@GOROOT=$GOGOGO@g" $HOME/.bashrc
     echo "Type 'source ~/.bashrc' to start using go$VERSION"
   fi
 elif [ "$SHELL" = "/bin/zsh" ]; then
   if cat $HOME/.zshrc | grep "GOROOT" > /dev/null ; then
     OLD=$(cat $HOME/.zshrc | grep "GOROOT" | grep -o "[0-9.][0-9.][0-9.]..")
-    sed -i "s@GOROOT=$HOME/.go/go-$OLD-$BIT@GOROOT=$GOGOGO@g" $HOME/.zshrc
+    sed -i '' "s@GOROOT=$HOME/.go/go-$OLD-$BIT@GOROOT=$GOGOGO@g" $HOME/.zshrc
     echo "Type 'source ~/.zshrc' to start using go$VERSION"
   fi
 elif [ "$SHELL" != "/bin/bash" ] || [ "$SHELL" != "/bin/zsh" ] ; then

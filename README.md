@@ -12,7 +12,7 @@ By default, the script will find the latest version of 64-bit Go and install to 
 
 ##How to install gophrz
 
-### Installing gophrz
+### Using gophrz binary
 
 To install the gophrz binary simply run the following command:
 

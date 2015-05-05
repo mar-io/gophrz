@@ -66,18 +66,18 @@ if [ "$BIT" = '64' ] ; then
     if [ -z "$VERSION" ] ; then
     VERSION=$GETVRS
     fi
-    BINARY="go$VERSION.linux-amd$BIT.tar.gz"
+    BINARY="go$VERSION.darwin-amd$BIT-osx10.8.tar.gz"
 elif [ "$BIT" = '32' ] ; then
     if [ -z "$VERSION" ] ; then
     VERSION=$GETVRS
     fi
-    BINARY="go$VERSION.linux-386.tar.gz"
+    BINARY="go$VERSION.darwin-386-osx10.8.tar.gz"
 elif [ -z "$BIT" ] ; then
     if [ -z "$VERSION" ] ; then
     VERSION=$GETVRS
     fi
     BIT='64'
-    BINARY="go$VERSION.linux-amd$BIT.tar.gz"
+    BINARY="go$VERSION.darwin-amd$BIT-osx10.8.tar.gz"
 else
   echo 'Not a valid bit version. Please select 32,64 or nothing at all.Exiting.'
   exit 1

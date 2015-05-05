@@ -40,9 +40,13 @@ EOF
   if [ -z "$lsb_dist" ] && [ -r /etc/fedora-release ]; then
     lsb_dist='fedora'
   fi
+  if [ -z "$lsb_dist" ] && [ "$(uname)" == "Darwin" ]; then
+    lsb_dist='osx'
+  fi
   if [ -z "$lsb_dist" ] && [ -r /etc/os-release ]; then
     lsb_dist="$(. /etc/os-release && echo "$ID")"
   fi
+
 
   lsb_dist="$(echo "$lsb_dist" | tr '[:upper:]' '[:lower:]')"
   case "$lsb_dist" in
@@ -50,6 +54,8 @@ EOF
       $sh_c "wget -P /usr/bin https://github.com/badmadrad/gophrz/raw/master/binary/gophrz";;
     ubuntu|debian|linuxmint)
       $sh_c "wget -P /usr/bin https://github.com/badmadrad/gophrz/raw/master/binary/gophrz";;
+    osx)
+      $sh_c "wget -O /usr/bin/gophrz https://github.com/badmadrad/gophrz/raw/master/binary/gophrz";;
   esac
 
 $sh_c "chmod 755 /usr/bin/gophrz"

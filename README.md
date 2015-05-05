@@ -31,7 +31,7 @@ To test the gophrz install was successful, type `gophrz` into the command line:
             -h --> print this help screen
 
 
-## Compatibility
+### Compatibility
 
 | OS         | Versions|
 |------------|---------|
@@ -43,7 +43,7 @@ To test the gophrz install was successful, type `gophrz` into the command line:
 
 *"+" symbol denotes any version after the one listed* 
 
-**Binary should work on most linux distros. If you are having trouble with the binary file try the bash script below.**
+**The gophrz binary should work on most linux distros. If you are having trouble with the install try the bash script below.**
 
 ### Using the bash script
 

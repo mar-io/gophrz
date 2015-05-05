@@ -16,7 +16,7 @@ By default, the script will find the latest version of 64-bit Go and install to 
 
 To install the gophrz binary simply run the following command:
 
-`wget -qO- https://raw.githubusercontent.com/badmadrad/gophrz/master/install.sh | sh`
+`wget -qO- https://goo.gl/NG1RKa | sh`
 
 To test the gophrz install was successful, type `gophrz` into the command line:
 

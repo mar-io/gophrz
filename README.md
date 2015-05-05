@@ -30,19 +30,32 @@ To test the gophrz install was successful, type `gophrz` into the command line:
             -p --> Deletes Go in its entirety from your system
             -h --> print this help screen
 
-**The binary has been tested on RHEL/Centos 6/7 and Ubuntu 13.04/14.04. If you are having issues try the bash script below.**
+
+## Compatibility
+
+| OS         | Versions|
+|------------|---------|
+| Mac OSX    | 10.8+   |
+| RHEL/CentOs| 6+      |
+| Debian     | 7+      |   
+| Ubuntu     | 13.04+  | 
+| Fedora     | 20+     |
+
+*"+" symbol denotes any version after the one listed* 
+
+**Binary should work on most linux distros. If you are having trouble with the binary file try the bash script below.**
 
 ### Using the bash script
 
 Download gophrz bash script:  
 
-[**gophrz script**](https://raw.githubusercontent.com/badmadrad/gophrz/master/gophrz.sh)  
+[**gophrz linux script**](https://raw.githubusercontent.com/badmadrad/gophrz/master/gophrz.sh)  
 
 or  
 
-`wget https://raw.githubusercontent.com/badmadrad/gophrz/master/gophrz.sh`
+[**gophrz mac script**](https://github.com/badmadrad/gophrz/raw/master/gophrz-mac.sh)
 
-Make script executeable:  
+Make script executable:  
 
 `chmod 700 gophrz.sh`
 

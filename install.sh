@@ -47,9 +47,9 @@ EOF
   lsb_dist="$(echo "$lsb_dist" | tr '[:upper:]' '[:lower:]')"
   case "$lsb_dist" in
     amzn|fedora|centos)
-      $sh_c "wget -P /usr/bin https://github.com/badmadrad/gophrz/raw/master/binary/centos/gophrz";;
+      $sh_c "wget -P /usr/bin https://github.com/badmadrad/gophrz/raw/master/binary/gophrz";;
     ubuntu|debian|linuxmint)
-      $sh_c "wget -P /usr/bin https://github.com/badmadrad/gophrz/raw/master/binary/debian/gophrz";;
+      $sh_c "wget -P /usr/bin https://github.com/badmadrad/gophrz/raw/master/binary/gophrz";;
   esac
 
 $sh_c "chmod 755 /usr/bin/gophrz"

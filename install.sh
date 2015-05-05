@@ -51,7 +51,7 @@ EOF
   lsb_dist="$(echo "$lsb_dist" | tr '[:upper:]' '[:lower:]')"
   case "$lsb_dist" in
     amzn|fedora|centos)
-      $sh_c "yum -y update && yum -y install curl wget tar"
+      $sh_c "yum clean expire-cache && yum -y install curl wget tar"
       $sh_c "wget -O /usr/bin/gophrz https://github.com/badmadrad/gophrz/raw/master/binary/gophrz";;
     ubuntu|debian|linuxmint)
       $sh_c "apt-get update && apt-get -y install curl wget tar"

@@ -55,7 +55,7 @@ EOF
     ubuntu|debian|linuxmint)
       $sh_c "wget -P /usr/bin https://github.com/badmadrad/gophrz/raw/master/binary/gophrz";;
     osx)
-      $sh_c "wget -O /usr/bin/gophrz https://github.com/badmadrad/gophrz/raw/master/binary/gophrz";;
+      $sh_c "wget -O /usr/bin/gophrz https://github.com/badmadrad/gophrz/raw/master/binary/gophrz-mac";;
   esac
 
 $sh_c "chmod 755 /usr/bin/gophrz"

@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 set -e
 
-GETVRS=$(curl -s https://golang.org/doc/devel/release.html | grep 'Build version' | awk '{ print $3 }' | grep -o "[0-9.][0-9.][0-9.]..")
+GETVRS=$(curl -s https://golang.org/doc/devel/release.html | grep 'Build version' | awk '{ print $3 }' | grep -o "[0-9.]...")
 
 while getopts 'v:b::dph' OPT; do
   case $OPT in
